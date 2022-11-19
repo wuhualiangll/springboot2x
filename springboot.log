@@ -1,0 +1,210 @@
+2022-08-10 17:17:42.512 ERROR 16416 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:212) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:368) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:335) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at com.example.quartzdemo.QuartzdemoApplication.main(QuartzdemoApplication.java:10) [classes/:na]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:322) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:195) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$3(Binder.java:414) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:512) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:414) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:375) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	... 19 common frames omitted
+
+2022-08-10 17:25:18.748 ERROR 13020 --- [main] o.s.b.SpringApplication                  : Application run failed
+
+org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'logging.level' to java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>
+	at org.springframework.boot.context.properties.bind.Binder.handleBindError(Binder.java:363) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:323) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:308) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:238) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:212) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.setLogLevels(LoggingApplicationListener.java:368) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeFinalLoggingLevels(LoggingApplicationListener.java:335) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:239) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:80) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:53) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:345) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at com.example.quartzdemo.QuartzdemoApplication.main(QuartzdemoApplication.java:10) [classes/:?]
+Caused by: org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.lang.String] to type [java.util.Map<java.lang.String, org.springframework.boot.logging.LogLevel>]
+	at org.springframework.core.convert.support.GenericConversionService.handleConverterNotFound(GenericConversionService.java:322) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:195) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter$CompositeConversionService.convert(BindConverter.java:170) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:96) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.BindConverter.convert(BindConverter.java:88) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.MapBinder.bindAggregate(MapBinder.java:64) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.AggregateBinder.bind(AggregateBinder.java:56) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindAggregate$3(Binder.java:414) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:571) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder$Context.access$100(Binder.java:512) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindAggregate(Binder.java:414) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:375) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:319) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	... 19 more
+
+2022-08-10 17:25:38.101  INFO 16820 --- [main] c.e.q.QuartzdemoApplication              : Starting QuartzdemoApplication on LAPTOP-50PKR7N0 with PID 16820 (G:\spriing\springboot2x\quartzdemo\target\classes started by 吴华亮 in G:\spriing\springboot2x)
+2022-08-10 17:25:38.114  INFO 16820 --- [main] c.e.q.QuartzdemoApplication              : No active profile set, falling back to default profiles: default
+2022-08-10 17:25:38.642  INFO 16820 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8086 (http)
+2022-08-10 17:25:38.652  INFO 16820 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-08-10 17:25:38.653  INFO 16820 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-10 17:25:38.707  INFO 16820 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-08-10 17:25:38.707  INFO 16820 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 526 ms
+2022-08-10 17:25:38.802  INFO 16820 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 17:25:38.900  INFO 16820 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8086 (http) with context path ''
+2022-08-10 17:25:38.906  INFO 16820 --- [main] c.e.q.QuartzdemoApplication              : Started QuartzdemoApplication in 1.199 seconds (JVM running for 2.225)
+2022-08-10 18:03:27.568  INFO 13968 --- [main] c.e.q.QuartzdemoApplication              : Starting QuartzdemoApplication on LAPTOP-50PKR7N0 with PID 13968 (G:\spriing\springboot2x\quartzdemo\target\classes started by 吴华亮 in G:\spriing\springboot2x)
+2022-08-10 18:03:27.586  INFO 13968 --- [main] c.e.q.QuartzdemoApplication              : No active profile set, falling back to default profiles: default
+2022-08-10 18:03:28.179  INFO 13968 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8086 (http)
+2022-08-10 18:03:28.190  INFO 13968 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-08-10 18:03:28.190  INFO 13968 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-10 18:03:28.243  INFO 13968 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-08-10 18:03:28.243  INFO 13968 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 598 ms
+2022-08-10 18:03:28.348  INFO 13968 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:03:28.438  INFO 13968 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-08-10 18:03:28.460  INFO 13968 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8086 (http) with context path ''
+2022-08-10 18:03:28.468  INFO 13968 --- [main] c.e.q.QuartzdemoApplication              : Started QuartzdemoApplication in 1.337 seconds (JVM running for 2.482)
+2022-08-10 18:03:30.012  INFO 13968 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:03:35.009  INFO 13968 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:03:40.008  INFO 13968 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:03:45.003  INFO 13968 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:03:50.014  INFO 13968 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:03:55.001  INFO 13968 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:04:00.002  INFO 13968 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:04:19.973  INFO 17808 --- [main] c.e.q.QuartzdemoApplication              : Starting QuartzdemoApplication on LAPTOP-50PKR7N0 with PID 17808 (G:\spriing\springboot2x\quartzdemo\target\classes started by 吴华亮 in G:\spriing\springboot2x)
+2022-08-10 18:04:19.987  INFO 17808 --- [main] c.e.q.QuartzdemoApplication              : No active profile set, falling back to default profiles: default
+2022-08-10 18:04:20.534  INFO 17808 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8086 (http)
+2022-08-10 18:04:20.544  INFO 17808 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-08-10 18:04:20.544  INFO 17808 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-10 18:04:20.591  INFO 17808 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-08-10 18:04:20.591  INFO 17808 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 536 ms
+2022-08-10 18:04:20.692  INFO 17808 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:04:20.783  INFO 17808 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-08-10 18:04:20.811  INFO 17808 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8086 (http) with context path ''
+2022-08-10 18:04:20.820  INFO 17808 --- [main] c.e.q.QuartzdemoApplication              : Started QuartzdemoApplication in 1.326 seconds (JVM running for 2.282)
+2022-08-10 18:04:25.009  INFO 17808 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:04:30.001  INFO 17808 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:04:35.004  INFO 17808 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:04:40.010  INFO 17808 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:04:45.008  INFO 17808 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:04:50.005  INFO 17808 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 18:04:55.008  INFO 17808 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:02:31.176  INFO 1340 --- [main] c.e.q.QuartzdemoApplication              : Starting QuartzdemoApplication on LAPTOP-50PKR7N0 with PID 1340 (G:\spriing\springboot2x\quartzdemo\target\classes started by 吴华亮 in G:\spriing\springboot2x)
+2022-08-10 19:02:31.189  INFO 1340 --- [main] c.e.q.QuartzdemoApplication              : No active profile set, falling back to default profiles: default
+2022-08-10 19:02:31.825  INFO 1340 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8086 (http)
+2022-08-10 19:02:31.836  INFO 1340 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-08-10 19:02:31.837  INFO 1340 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-10 19:02:31.893  INFO 1340 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-08-10 19:02:31.894  INFO 1340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 650 ms
+2022-08-10 19:02:32.009  INFO 1340 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:02:32.097  INFO 1340 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-08-10 19:02:32.120  INFO 1340 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8086 (http) with context path ''
+2022-08-10 19:02:32.136  INFO 1340 --- [main] c.e.q.QuartzdemoApplication              : Started QuartzdemoApplication in 1.41 seconds (JVM running for 2.526)
+2022-08-10 19:02:35.001  INFO 1340 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:02:40.012  INFO 1340 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:02:45.004  INFO 1340 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:02:50.015  INFO 1340 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:02:52.936  INFO 1340 --- [http-nio-8086-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-10 19:02:52.936  INFO 1340 --- [http-nio-8086-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-08-10 19:02:52.939  INFO 1340 --- [http-nio-8086-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 3 ms
+2022-08-10 19:02:55.005  INFO 1340 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:03:00.005  INFO 1340 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:05:21.589  INFO 17828 --- [main] c.e.q.QuartzdemoApplication              : Starting QuartzdemoApplication on LAPTOP-50PKR7N0 with PID 17828 (G:\spriing\springboot2x\quartzdemo\target\classes started by 吴华亮 in G:\spriing\springboot2x)
+2022-08-10 19:05:21.600  INFO 17828 --- [main] c.e.q.QuartzdemoApplication              : No active profile set, falling back to default profiles: default
+2022-08-10 19:05:22.246  INFO 17828 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8086 (http)
+2022-08-10 19:05:22.257  INFO 17828 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-08-10 19:05:22.258  INFO 17828 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-10 19:05:22.310  INFO 17828 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-08-10 19:05:22.311  INFO 17828 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 656 ms
+2022-08-10 19:05:22.424  INFO 17828 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:05:22.509  INFO 17828 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-08-10 19:05:22.539  INFO 17828 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8086 (http) with context path ''
+2022-08-10 19:05:22.546  INFO 17828 --- [main] c.e.q.QuartzdemoApplication              : Started QuartzdemoApplication in 1.372 seconds (JVM running for 2.413)
+2022-08-10 19:05:25.002  INFO 17828 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:05:30.007  INFO 17828 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:05:31.102  INFO 17828 --- [http-nio-8086-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-10 19:05:31.103  INFO 17828 --- [http-nio-8086-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2022-08-10 19:05:31.107  INFO 17828 --- [http-nio-8086-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 4 ms
+2022-08-10 19:05:35.002  INFO 17828 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:05:40.012  INFO 17828 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:05:45.004  INFO 17828 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:05:50.015  INFO 17828 --- [scheduling-1] c.e.q.c.TestController                   : 执行前
+2022-08-10 19:06:21.111  INFO 17008 --- [main] c.e.q.QuartzdemoApplication              : Starting QuartzdemoApplication on LAPTOP-50PKR7N0 with PID 17008 (G:\spriing\springboot2x\quartzdemo\target\classes started by 吴华亮 in G:\spriing\springboot2x)
+2022-08-10 19:06:21.124  INFO 17008 --- [main] c.e.q.QuartzdemoApplication              : No active profile set, falling back to default profiles: default
+2022-08-10 19:06:21.650  INFO 17008 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8086 (http)
+2022-08-10 19:06:21.660  INFO 17008 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-08-10 19:06:21.660  INFO 17008 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-10 19:06:21.709  INFO 17008 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-08-10 19:06:21.709  INFO 17008 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 536 ms
+2022-08-10 19:06:21.815  INFO 17008 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:06:21.894  INFO 17008 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-08-10 19:06:21.924  INFO 17008 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8086 (http) with context path ''
+2022-08-10 19:06:21.932  INFO 17008 --- [main] c.e.q.QuartzdemoApplication              : Started QuartzdemoApplication in 1.2 seconds (JVM running for 2.136)
+2022-08-10 19:14:03.161  INFO 16164 --- [main] c.e.q.QuartzdemoApplication              : Starting QuartzdemoApplication on LAPTOP-50PKR7N0 with PID 16164 (G:\spriing\springboot2x\quartzdemo\target\classes started by 吴华亮 in G:\spriing\springboot2x)
+2022-08-10 19:14:03.175  INFO 16164 --- [main] c.e.q.QuartzdemoApplication              : No active profile set, falling back to default profiles: default
+2022-08-10 19:14:03.796  INFO 16164 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8086 (http)
+2022-08-10 19:14:03.806  INFO 16164 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-08-10 19:14:03.806  INFO 16164 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-10 19:14:03.858  INFO 16164 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-08-10 19:14:03.859  INFO 16164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 626 ms
+2022-08-10 19:14:03.968  INFO 16164 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:14:04.058  INFO 16164 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-08-10 19:14:04.092  INFO 16164 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8086 (http) with context path ''
+2022-08-10 19:14:04.100  INFO 16164 --- [main] c.e.q.QuartzdemoApplication              : Started QuartzdemoApplication in 1.364 seconds (JVM running for 2.384)
+2022-08-10 19:17:20.448  INFO 524 --- [main] c.e.q.QuartzdemoApplication              : Starting QuartzdemoApplication on LAPTOP-50PKR7N0 with PID 524 (G:\spriing\springboot2x\quartzdemo\target\classes started by 吴华亮 in G:\spriing\springboot2x)
+2022-08-10 19:17:20.461  INFO 524 --- [main] c.e.q.QuartzdemoApplication              : No active profile set, falling back to default profiles: default
+2022-08-10 19:17:21.028  INFO 524 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8086 (http)
+2022-08-10 19:17:21.038  INFO 524 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-08-10 19:17:21.038  INFO 524 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-10 19:17:21.086  INFO 524 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-08-10 19:17:21.086  INFO 524 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 566 ms
+2022-08-10 19:17:21.193  INFO 524 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:17:21.270  INFO 524 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-08-10 19:17:21.300  INFO 524 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8086 (http) with context path ''
+2022-08-10 19:17:21.308  INFO 524 --- [main] c.e.q.QuartzdemoApplication              : Started QuartzdemoApplication in 1.26 seconds (JVM running for 2.23)
+2022-08-10 19:18:24.186  INFO 12552 --- [main] c.e.q.QuartzdemoApplication              : Starting QuartzdemoApplication on LAPTOP-50PKR7N0 with PID 12552 (G:\spriing\springboot2x\quartzdemo\target\classes started by 吴华亮 in G:\spriing\springboot2x)
+2022-08-10 19:18:24.196  INFO 12552 --- [main] c.e.q.QuartzdemoApplication              : No active profile set, falling back to default profiles: default
+2022-08-10 19:18:24.738  INFO 12552 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8086 (http)
+2022-08-10 19:18:24.750  INFO 12552 --- [main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2022-08-10 19:18:24.750  INFO 12552 --- [main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-08-10 19:18:24.797  INFO 12552 --- [main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2022-08-10 19:18:24.797  INFO 12552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 543 ms
+2022-08-10 19:18:24.904  INFO 12552 --- [main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:18:24.981  INFO 12552 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-08-10 19:18:25.011  INFO 12552 --- [main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8086 (http) with context path ''
+2022-08-10 19:18:25.018  INFO 12552 --- [main] c.e.q.QuartzdemoApplication              : Started QuartzdemoApplication in 1.211 seconds (JVM running for 2.101)
